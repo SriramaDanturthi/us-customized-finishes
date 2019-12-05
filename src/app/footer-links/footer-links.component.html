@@ -1,1 +1,9 @@
-<p>footer-links works!</p>
+<div class="site-footer__widget footer-links">
+  <h5 class="footer-links__title">{{header}}</h5>
+  <ul class="footer-links__list">
+    <!---->
+    <li class="footer-links__item ng-star-inserted" *ngFor="let hero of getLinks">
+      <a class="footer-links__link" href="{{hero.url}}">{{hero.title}}</a>
+    </li>
+  </ul>
+</div>

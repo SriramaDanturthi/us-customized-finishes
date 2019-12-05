@@ -11,5 +11,6 @@ export class FooterNewsletterComponent implements OnInit {
 
   ngOnInit() {
   }
-
+    header: any;
+    links: [];
 }
