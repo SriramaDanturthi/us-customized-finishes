@@ -6,7 +6,7 @@
           <owl-carousel-o [options]="slideShowOptions">
             <ng-container *ngFor="let slide of slidesStore">
               <ng-template carouselSlide [id]="slide.Id">
-                <youtube-player [videoId]="id" [height]="600" [width]="1134"
+                <youtube-player [videoId]="id" [height]="400" [width]="1134"
                                 (ready)="savePlayer($event)"
                                 (change)="onStateChange($event)"></youtube-player>
               </ng-template>

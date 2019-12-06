@@ -30,6 +30,8 @@ import { AccessoriesComponent } from './accessories/accessories.component';
 import { SpecalityProductsComponent } from './specality-products/specality-products.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 @NgModule({
     declarations: [
@@ -56,7 +58,9 @@ import { HomeComponent } from './home/home.component';
         AccessoriesComponent,
         SpecalityProductsComponent,
         ContactusComponent,
-        HomeComponent
+        HomeComponent,
+        ProductsComponent,
+        TestimonialsComponent
     ],
     imports: [
         BrowserModule,
