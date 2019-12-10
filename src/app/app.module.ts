@@ -32,6 +32,15 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { BlockProductsCarouselComponent } from './block-products-carousel/block-products-carousel.component';
+import { BlockHeaderComponent } from './block-header/block-header.component';
+import { CompanyProfileComponent } from './company-profile/company-profile.component';
+import { HowToOrderComponent } from './how-to-order/how-to-order.component';
+import { GalleryAndVideosComponent } from './gallery-and-videos/gallery-and-videos.component';
+import { FinishesComponent } from './finishes/finishes.component';
+import { FaqComponent } from './faq/faq.component';
+import { WarrantyComponent } from './warranty/warranty.component';
 
 @NgModule({
     declarations: [
@@ -60,7 +69,16 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
         ContactusComponent,
         HomeComponent,
         ProductsComponent,
-        TestimonialsComponent
+        TestimonialsComponent,
+        ProductCardComponent,
+        BlockProductsCarouselComponent,
+        BlockHeaderComponent,
+        CompanyProfileComponent,
+        HowToOrderComponent,
+        GalleryAndVideosComponent,
+        FinishesComponent,
+        FaqComponent,
+        WarrantyComponent
     ],
     imports: [
         BrowserModule,
