@@ -41,6 +41,7 @@ import { GalleryAndVideosComponent } from './gallery-and-videos/gallery-and-vide
 import { FinishesComponent } from './finishes/finishes.component';
 import { FaqComponent } from './faq/faq.component';
 import { WarrantyComponent } from './warranty/warranty.component';
+import { CabinetDoorsAndDrawerFrontsComponent } from './cabinet-doors-and-drawer-fronts/cabinet-doors-and-drawer-fronts.component';
 
 @NgModule({
     declarations: [
@@ -78,7 +79,8 @@ import { WarrantyComponent } from './warranty/warranty.component';
         GalleryAndVideosComponent,
         FinishesComponent,
         FaqComponent,
-        WarrantyComponent
+        WarrantyComponent,
+        CabinetDoorsAndDrawerFrontsComponent
     ],
     imports: [
         BrowserModule,

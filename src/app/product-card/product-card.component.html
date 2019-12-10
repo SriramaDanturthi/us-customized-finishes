@@ -1,51 +1,13 @@
 <div class="product-card">
   <button appclick="" class="product-card__quickview" type="button">
-    <app-icon name="quickview-16" size="16" >
+    <app-icon name="quickview-16" size="16">
     </app-icon>
     <span class="fake-svg-icon"></span>
   </button>
-  <!---->
-  <div class="product-card__badges-list ng-star-inserted">
-    <!----><!----><!---->
-    <div class="product-card__badge product-card__badge--new ng-star-inserted">New</div>
-  </div>
   <div class="product-card__image">
-    <!----><a appclick="" href="/themes/red-ltr/classic/shop/product/1" class="ng-star-inserted"><img alt="" src="assets/images/products/product-1.jpg"></a>
+    <a [href]="link"><img alt="" [src]="image"></a>
   </div>
   <div class="product-card__info">
-    <div class="product-card__name"><a appclick="" href="/themes/red-ltr/classic/shop/product/1">Electric Planer Brandix KL370090G 300 Watts</a></div>
-    <div class="product-card__rating">
-      <div class="product-card__rating-legend">12 Reviews</div>
-    </div>
-    <!---->
-    <ul class="product-card__features-list ng-star-inserted">
-      <!---->
-      <li class="ng-star-inserted">Speed: 750 RPM</li>
-      <li class="ng-star-inserted">Power Source: Cordless-Electric</li>
-      <li class="ng-star-inserted">Battery Cell Type: Lithium</li>
-      <li class="ng-star-inserted">Voltage: 20 Volts</li>
-      <li class="ng-star-inserted">Battery Capacity: 2 Ah</li>
-    </ul>
-  </div>
-  <div class="product-card__actions">
-    <div class="product-card__availability">
-      Availability: <!----><span class="text-success ng-star-inserted">In Stock</span>
-    </div>
-    <div class="product-card__prices">
-      <!----><!----><!----> $749.00
-    </div>
-    <div class="product-card__buttons">
-      <button appclick="" class="btn btn-primary product-card__addtocart" type="button">Add To Cart</button><button appclick="" class="btn btn-secondary product-card__addtocart product-card__addtocart--list" type="button">Add To Cart</button>
-      <button appclick="" class="btn btn-light btn-svg-icon btn-svg-icon--fake-svg product-card__wishlist" type="button">
-        <app-icon name="wishlist-16" size="16" >
-        </app-icon>
-        <span class="fake-svg-icon fake-svg-icon--wishlist-16"></span>
-      </button>
-      <button appclick="" class="btn btn-light btn-svg-icon btn-svg-icon--fake-svg product-card__compare" type="button">
-        <app-icon name="compare-16" size="16" >
-        </app-icon>
-        <span class="fake-svg-icon fake-svg-icon--compare-16"></span>
-      </button>
-    </div>
+    <div class="product-card__name"><h5><a [href]="link">{{title}}</a></h5></div>
   </div>
 </div>

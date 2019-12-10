@@ -2730,7 +2730,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-origin {
 .product-card__name {
   font-size: 15px;
   line-height: 19px;
-  flex-grow: 1
+  flex-grow: 1;
+  text-align:center;
 }
 
 .product-card__name a {
