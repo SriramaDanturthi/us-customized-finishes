@@ -49,6 +49,11 @@ import { BlockMapComponent } from './block-map/block-map.component';
 import { PageHeaderComponent } from './page-header/page-header.component';
 import { VideoComponent } from './video/video.component';
 import { MediaComponent } from './media/media.component';
+import { ProductsViewComponent } from './products-view/products-view.component';
+import { PaginationComponent } from './pagination/pagination.component';
+import { ProductsSidebarComponent } from './products-sidebar/products-sidebar.component';
+import { WidgetFiltersComponent } from './widget-filters/widget-filters.component';
+import { WidgetProductsComponent } from './widget-products/widget-products.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +96,12 @@ import { MediaComponent } from './media/media.component';
     BlockMapComponent,
     PageHeaderComponent,
     VideoComponent,
-    MediaComponent
+    MediaComponent,
+    ProductsViewComponent,
+    PaginationComponent,
+    ProductsSidebarComponent,
+    WidgetFiltersComponent,
+    WidgetProductsComponent
   ],
   imports: [
     BrowserModule,

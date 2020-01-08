@@ -3,28 +3,19 @@
     <div class="page-header__breadcrumb">
       <nav aria-label='breadcrumb'>
         <ol class='breadcrumb'>
-          <li class="breadcrumb-item ">
+          <li class="breadcrumb-item">
             <a href="/home">Home</a>
             <app-icon class="breadcrumb-arrow" name="arrow-rounded-right-6x9" size="6x9">
             </app-icon>
           </li>
-          <li *ngFor='let breadcrumb of breadcrumbs'>
+          <li *ngFor='let breadcrumb of breadcrumbs' class="breadcrumb-item">
             <a [routerLink]='[breadcrumb.url, breadcrumb.params]' routerLinkActive='active'>{{ breadcrumb.label }}</a>
           </li>
         </ol>
       </nav>
-      <!-- <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item ">
-            <a href="/home">Home</a><app-icon class="breadcrumb-arrow" name="arrow-rounded-right-6x9" size="6x9">
-            </app-icon>
-          </li>
-          <li class="breadcrumb-item active" [model]="menuItems"></li>
-        </ol>
-      </nav> -->
     </div>
     <div class="page-header__title ">
-      <h1>Contact Uss</h1>
+      <h1>{{title}}</h1>
     </div>
   </div>
 </div>

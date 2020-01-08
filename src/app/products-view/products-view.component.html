@@ -1,0 +1,62 @@
+<div class="products-view ng-untouched ng-pristine ng-valid">
+    <div class="products-view__loader"></div>
+    <!---->
+    <div class="products-view__content ng-star-inserted">
+        <div class="products-view__options">
+            <div class="view-options view-options--offcanvas--mobile">
+                <div class="view-options__filters-button"><button class="filters-button" type="button">
+                        <app-icon class="filters-button__icon" name="filters-16" size="16">
+                        </app-icon><span class="filters-button__title">Filters</span>
+                        <!---->
+                    </button></div>
+                <div class="view-options__layout">
+                    <div class="layout-switcher">
+                        <div class="layout-switcher__list"><button
+                                class="layout-switcher__button layout-switcher__button--active" title="Grid"
+                                type="button">
+                                <app-icon name="layout-grid-16x16" size="16"></app-icon>
+                            </button><button class="layout-switcher__button" title="Grid With Features" type="button">
+                                <app-icon name="layout-grid-with-details-16x16" size="16">
+                                </app-icon>
+                            </button><button class="layout-switcher__button" title="List" type="button">
+                                <app-icon name="layout-list-16x16" size="16"></app-icon>
+                            </button></div>
+                    </div>
+                </div>
+                <div class="view-options__legend"> Showing 1–12 of 16
+                    results </div>
+                <div class="view-options__divider"></div>
+                <div class="view-options__control"><label for="view-options-sort">Sort By</label>
+                    <div><select class="form-control form-control-sm ng-untouched ng-pristine ng-valid"
+                            formcontrolname="sort" id="view-options-sort">
+                            <option value="default">Default</option>
+                            <option value="name_asc">Name (A-Z)</option>
+                            <option value="name_desc">Name (Z-A)
+                            </option>
+                        </select></div>
+                </div>
+                <div class="view-options__control"><label for="view-options-limit">Show</label>
+                    <div><select class="form-control form-control-sm ng-untouched ng-pristine ng-valid"
+                            formcontrolname="limit" id="view-options-limit">
+                            <option value="12">12</option>
+                            <option value="24">24</option>
+                        </select></div>
+                </div>
+            </div>
+        </div>
+        <div class="products-view__list products-list" data-layout="grid-3-sidebar" data-with-features="false">
+            <div class="products-list__body">
+                <!---->
+                <div class="products-list__item ng-star-inserted">
+                    <app-product-card _nghost-serverapp-c36="">
+                    </app-product-card>
+                </div>
+            </div>
+        </div>
+        <div class="products-view__pagination">
+            <app-pagination formcontrolname="page" class="ng-untouched ng-pristine ng-valid">
+            </app-pagination>
+        </div>
+    </div>
+    <!---->
+</div>
