@@ -1,0 +1,15 @@
+<div class="view" style="height:450px">
+  <video autoplay muted loop>
+    <source [src]="slide.Src" type="video/mp4" />
+  </video>
+  <div class="carousel-caption carousel-caption-custom d-none d-md-block text-left">
+    <h3 class="clr-carousal">{{slide.SubTitle}}</h3>
+    <div><br></div>
+    <p class="clr-carousal">{{slide.Description}}</p>
+    <button type="button" class="btn btn-danger" [owlRouterLink]="['/contactus']">
+      <span>
+        <i class="fa fa-cog fa-lg"></i>Contact us
+      </span>
+    </button>
+  </div>
+</div>

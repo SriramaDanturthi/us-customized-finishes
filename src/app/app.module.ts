@@ -4,7 +4,10 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppRoutingModule } from './app-routing.module';
-import { YoutubePlayerModule } from 'ngx-youtube-player';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { EmbedVideo } from 'ngx-embed-video';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -42,55 +45,65 @@ import { FinishesComponent } from './finishes/finishes.component';
 import { FaqComponent } from './faq/faq.component';
 import { WarrantyComponent } from './warranty/warranty.component';
 import { CabinetDoorsAndDrawerFrontsComponent } from './cabinet-doors-and-drawer-fronts/cabinet-doors-and-drawer-fronts.component';
+import { BlockMapComponent } from './block-map/block-map.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
+import { VideoComponent } from './video/video.component';
+import { MediaComponent } from './media/media.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        MainComponent,
-        LoadingBarComponent,
-        QuickviewComponent,
-        HeaderComponent,
-        HeaderTopbarComponent,
-        PageHomeComponent,
-        BlockSlideshowComponent,
-        FooterComponent,
-        FooterContactsComponent,
-        FooterLinksComponent,
-        FooterNewsletterComponent,
-        HeaderNavComponent,
-        HeaderLinksComponent,
-        IconComponent,
-        HeaderDropcartComponent,
-        HeaderMenuComponent,
-        CabinetDoorsComponent,
-        DrawerFrontsComponent,
-        MoldingsComponent,
-        AccessoriesComponent,
-        SpecalityProductsComponent,
-        ContactusComponent,
-        HomeComponent,
-        ProductsComponent,
-        TestimonialsComponent,
-        ProductCardComponent,
-        BlockProductsCarouselComponent,
-        BlockHeaderComponent,
-        CompanyProfileComponent,
-        HowToOrderComponent,
-        GalleryAndVideosComponent,
-        FinishesComponent,
-        FaqComponent,
-        WarrantyComponent,
-        CabinetDoorsAndDrawerFrontsComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        NgbModule,
-        BrowserAnimationsModule,
-        CarouselModule,
-        YoutubePlayerModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    MainComponent,
+    LoadingBarComponent,
+    QuickviewComponent,
+    HeaderComponent,
+    HeaderTopbarComponent,
+    PageHomeComponent,
+    BlockSlideshowComponent,
+    FooterComponent,
+    FooterContactsComponent,
+    FooterLinksComponent,
+    FooterNewsletterComponent,
+    HeaderNavComponent,
+    HeaderLinksComponent,
+    IconComponent,
+    HeaderDropcartComponent,
+    HeaderMenuComponent,
+    CabinetDoorsComponent,
+    DrawerFrontsComponent,
+    MoldingsComponent,
+    AccessoriesComponent,
+    SpecalityProductsComponent,
+    ContactusComponent,
+    HomeComponent,
+    ProductsComponent,
+    TestimonialsComponent,
+    ProductCardComponent,
+    BlockProductsCarouselComponent,
+    BlockHeaderComponent,
+    CompanyProfileComponent,
+    HowToOrderComponent,
+    GalleryAndVideosComponent,
+    FinishesComponent,
+    FaqComponent,
+    WarrantyComponent,
+    CabinetDoorsAndDrawerFrontsComponent,
+    BlockMapComponent,
+    PageHeaderComponent,
+    VideoComponent,
+    MediaComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    CarouselModule,
+    YouTubePlayerModule, 
+    HttpClientModule,
+    EmbedVideo.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

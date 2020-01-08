@@ -1,1 +1,41 @@
-<app-block-slideshow></app-block-slideshow>
+<div class="block block-products-carousel1">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-5"><hr></div>
+      <div class="col-2 text-center align-middle"><h3 class=""><small>Testimonials</small></h3><br></div>
+      <div class="col-5"><hr></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="block-slideshow block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="block-slideshow__body">
+              <owl-carousel-o [options]="slideShowOptions">
+                <ng-container *ngFor="let slide of testmonials">
+                  <ng-template carouselSlide [id]="slide.Id">
+                    <blockquote class="text-center">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-9">
+                            <p class="message">
+                              {{slide.message}}
+                            </p>
+                          </div>
+                          <div class="col-1 vl-grey"></div>
+                          <div class="col-2">
+                            <p class="author"><strong>{{slide.author}},</strong>{{slide.state}}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </blockquote>
+                  </ng-template>
+                </ng-container>
+              </owl-carousel-o>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,12 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
     "\\src\\app",
+    "\\src\\app\\block-products-carousel",
+    "\\src\\app\\block-slideshow",
+    "\\src\\app\\home",
     "\\src\\app\\testimonials",
-    "\\src\\assets",
-    "\\src\\assets\\images"
+    "\\src\\app\\video"
   ],
-  "SelectedNode": "\\src\\app\\testimonials\\testimonials.component.html",
   "PreviewInSolutionExplorer": false
 }

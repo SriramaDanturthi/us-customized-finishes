@@ -1,6 +1,8 @@
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
+youtube-player iframe{
+    width:100% !important;
+}
 
 @-webkit-keyframes preloader-animation {
   from {
@@ -5797,11 +5799,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-origin {
 .site-header__middle {
   display: flex;
   align-items: center;
-  height: 104px
+  height: 72px
 }
 
 .site-header__logo {
-  width: 255px;
+  width: 355px;
   display: flex;
   align-items: center;
   justify-content: center;

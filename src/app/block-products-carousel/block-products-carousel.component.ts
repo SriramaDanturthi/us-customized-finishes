@@ -34,10 +34,10 @@ export class BlockProductsCarouselComponent implements OnInit {
   }
 
   slidesStore: SlideModel[] = [
-    new SlideModel('1', 'assets/images/home/cabinet-doors.jpg', 'Cabinet Doors', '/cabinetdoors'),
-    new SlideModel('2', 'assets/images/home/drawer-fronts.jpg', 'Drawer Fronts', '/drawerfronts'),
-    new SlideModel('3', 'assets/images/home/moldings.jpg', 'Moldings', '/moldings'),
-    new SlideModel('4', 'assets/images/home/hardware.jpg', 'Accessories', '/accessories')
+    new SlideModel('1', 'assets/images/home/cabinet-doors.jpg', 'Cabinet Doors', '/cabinetdoors','',''),
+    new SlideModel('2', 'assets/images/home/drawer-fronts.jpg', 'Drawer Fronts', '/drawerfronts','',''),
+    new SlideModel('3', 'assets/images/home/moldings.jpg', 'Moldings', '/moldings','',''),
+    new SlideModel('4', 'assets/images/home/hardware.jpg', 'Accessories', '/accessories','','')
   ]
   //
   ///themes/red-ltr/classic/shop/product/1
