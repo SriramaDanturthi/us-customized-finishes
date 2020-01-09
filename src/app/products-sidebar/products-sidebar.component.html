@@ -9,13 +9,11 @@
             </button>
         </div>
         <div class="block-sidebar__item">
-            <app-widget-filters>
-            </app-widget-filters>
+            <ul>
+                <li *ngFor="let item of data">
+                    <a href='/productsview/{{item.title}}'>{{item.title}}</a>
+                </li>
+            </ul>
         </div>
-        <!---->
-        <!-- <div class="block-sidebar__item d-none d-lg-block ng-star-inserted">
-            <app-widget-products header="Latest Products">
-            </app-widget-products> 
-        </div>-->
     </div>
 </div>

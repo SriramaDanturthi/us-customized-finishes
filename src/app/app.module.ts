@@ -54,6 +54,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { ProductsSidebarComponent } from './products-sidebar/products-sidebar.component';
 import { WidgetFiltersComponent } from './widget-filters/widget-filters.component';
 import { WidgetProductsComponent } from './widget-products/widget-products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -101,7 +102,8 @@ import { WidgetProductsComponent } from './widget-products/widget-products.compo
     PaginationComponent,
     ProductsSidebarComponent,
     WidgetFiltersComponent,
-    WidgetProductsComponent
+    WidgetProductsComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

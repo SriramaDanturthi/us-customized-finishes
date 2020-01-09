@@ -13,6 +13,8 @@ import { AccessoriesComponent } from './accessories/accessories.component';
 import { DrawerFrontsComponent } from './drawer-fronts/drawer-fronts.component';
 import { MoldingsComponent } from './moldings/moldings.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { ProductsViewComponent } from './products-view/products-view.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -61,17 +63,19 @@ const routes: Routes = [
           {
             path: '',
             component: CabinetDoorsAndDrawerFrontsComponent,
-            data: { breadcrumb: 'Cabinet Doors And Drawer Fronts' },
-            children: [
-              {
-                path: '',
-                component: MoldingsComponent,
-                data: { breadcrumb: 'Cabinet Doors And Drawer Fronts' },
-                outlet:'sidebar'
-              }
-            ]
+            data: { breadcrumb: 'Cabinet Doors And Drawer Fronts' }
           }
         ]
+      },
+      {
+        path: 'productsview/:title',
+        component: ProductsViewComponent,
+        data: { breadcrumb: 'Cabinet Doors And Drawer Fronts' }
+      },
+      {
+        path: 'productdetails/:title',
+        component: ProductDetailsComponent,
+        data: { breadcrumb: 'Cabinet Doors And Drawer Fronts' }
       },
       {
         path: 'moldings',
