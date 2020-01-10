@@ -55,6 +55,7 @@ import { ProductsSidebarComponent } from './products-sidebar/products-sidebar.co
 import { WidgetFiltersComponent } from './widget-filters/widget-filters.component';
 import { WidgetProductsComponent } from './widget-products/widget-products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { PageHeaderService } from './page-header/page-header.service';
 
 @NgModule({
   declarations: [
@@ -115,7 +116,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     HttpClientModule,
     EmbedVideo.forRoot()
   ],
-  providers: [],
+  providers: [PageHeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

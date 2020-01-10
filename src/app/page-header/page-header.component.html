@@ -8,8 +8,11 @@
             <app-icon class="breadcrumb-arrow" name="arrow-rounded-right-6x9" size="6x9">
             </app-icon>
           </li>
-          <li *ngFor='let breadcrumb of breadcrumbs' class="breadcrumb-item">
-            <a [routerLink]='[breadcrumb.url, breadcrumb.params]' routerLinkActive='active'>{{ breadcrumb.label }}</a>
+          <li *ngFor='let breadcrumb of breadcrumbs; let i=index' class="breadcrumb-item" [class.active]="i===breadcrumbs.length-1">
+            <a [routerLink]='[breadcrumb.url]' routerLinkActive='active' *ngIf="i!==breadcrumbs.length-1">{{ breadcrumb.label }}</a>
+            <span *ngIf="i===breadcrumbs.length-1">{{ breadcrumb.label }}</span>
+            <app-icon class="breadcrumb-arrow" name="arrow-rounded-right-6x9" size="6x9" *ngIf="i!==breadcrumbs.length-1">
+            </app-icon>
           </li>
         </ol>
       </nav>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd, PRIMARY_OUTLET, RoutesRecognized } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { map, mergeMap } from 'rxjs/internal/operators';
+import { PageHeaderService } from './page-header.service';
 
 @Component({
   selector: "app-page-header",
@@ -10,43 +11,40 @@ import { map, mergeMap } from 'rxjs/internal/operators';
 })
 export class PageHeaderComponent implements OnInit {
 
-  breadcrumbs;
-  title;
+  name: string;
+  menu: Array<any> = [];
+  breadcrumbs: Array<any> = [];
 
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private router: Router) {
-  }
+  constructor(private _router: Router, private menuService: PageHeaderService) {}
 
 
   ngOnInit() {
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .pipe(map(() => this.activatedRoute))
-      .pipe(map((route) => {
-        while (route.firstChild) { route = route.firstChild; }
-        return route;
-      }))
-      .pipe(filter(route => route.outlet === PRIMARY_OUTLET))
-      .subscribe(route => {
-
-        let snapshot = this.router.routerState.snapshot;
-        this.breadcrumbs = [];
-        let url = snapshot.url;
-        let routeData = route.snapshot.data;
-
-        console.log(routeData);
-        this.title =routeData['breadcrumb'];
-        let label = routeData['breadcrumb'];
-        let params = snapshot.root.params;
-
-        this.breadcrumbs.push({
-          url: url,
-          label: label,
-          params: params
+     // 取得MenuService裡的menu
+     this.menu = this.menuService.getMenu();
+     this.listenRouting();
+  }
+  listenRouting() {
+    let routerUrl: string, routerList: Array<any>, target: any;
+    this._router.events.subscribe((router: any) => {
+      routerUrl = router.urlAfterRedirects;
+      if (routerUrl && typeof routerUrl === 'string') {
+        target = this.menu;
+        this.breadcrumbs.length = 0;
+        routerList = routerUrl.slice(1).split('/');
+        routerList.forEach((router, index) => {
+          target = target.find(page => page.path.slice(2) === router);
+          this.breadcrumbs.push({
+            label: target.title,
+            url: (index === 0) ? target.path : `${this.breadcrumbs[index-1].url}/${target.path.slice(2)}`
+          });
+          
+          if (index+1 !== routerList.length) {
+            target = target.children;
+          }
         });
 
-      });
-
+        console.log(this.breadcrumbs);
+      }
+    });
   }
 }

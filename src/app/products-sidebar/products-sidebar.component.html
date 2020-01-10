@@ -9,9 +9,9 @@
             </button>
         </div>
         <div class="block-sidebar__item">
-            <ul>
-                <li *ngFor="let item of data">
-                    <a href='/productsview/{{item.title}}'>{{item.title}}</a>
+            <ul class="filter-categories__list">
+                <li *ngFor="let item of data" class="filter-categories__item filter-categories__item--child">
+                    <a href='/cabinetdoorsanddrawerfronts/{{item.title.split(" ").join("-")}}'>{{item.title}}</a>
                 </li>
             </ul>
         </div>

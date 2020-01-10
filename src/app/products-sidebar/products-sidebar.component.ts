@@ -1,17 +1,24 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products-sidebar',
   templateUrl: './products-sidebar.component.html',
   styleUrls: ['./products-sidebar.component.scss']
 })
-export class ProductsSidebarComponent implements OnInit {
+export class ProductsSidebarComponent implements OnInit, OnDestroy {
 
   @Input() data: any[];
-  constructor() { }
+  private routeSub: any;
+  title: string;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log(this.data);
+    this.routeSub = this.route.params.subscribe(params => {
+      this.title = params['title'];
+    });
   }
-
+  ngOnDestroy() {
+    this.routeSub.unsubscribe();
+  }
 }
