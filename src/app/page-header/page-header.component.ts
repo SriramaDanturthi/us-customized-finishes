@@ -15,13 +15,12 @@ export class PageHeaderComponent implements OnInit {
   menu: Array<any> = [];
   breadcrumbs: Array<any> = [];
 
-  constructor(private _router: Router, private menuService: PageHeaderService) {}
+  constructor(private _router: Router, private menuService: PageHeaderService) { }
 
 
   ngOnInit() {
-     // 取得MenuService裡的menu
-     this.menu = this.menuService.getMenu();
-     this.listenRouting();
+    this.menu = this.menuService.getMenu();
+    this.listenRouting();
   }
   listenRouting() {
     let routerUrl: string, routerList: Array<any>, target: any;
@@ -35,10 +34,11 @@ export class PageHeaderComponent implements OnInit {
           target = target.find(page => page.path.slice(2) === router);
           this.breadcrumbs.push({
             label: target.title,
-            url: (index === 0) ? target.path : `${this.breadcrumbs[index-1].url}/${target.path.slice(2)}`
+            url: (index === 0) ? target.path : `${this.breadcrumbs[index - 1].url}/${target.path.slice(2)}`,
+            params: { title: target.title }
           });
-          
-          if (index+1 !== routerList.length) {
+
+          if (index + 1 !== routerList.length) {
             target = target.children;
           }
         });

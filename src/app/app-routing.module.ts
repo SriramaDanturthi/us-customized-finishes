@@ -64,17 +64,14 @@ const routes: Routes = [
             path: '',
             component: CabinetDoorsAndDrawerFrontsComponent,
             data: { breadcrumb: 'Cabinet Doors And Drawer Fronts' },
-            children:[
-              {
-                path: ':title',
-                component: CabinetDoorsAndDrawerFrontsComponent,
-                data: { breadcrumb: ':title' }
-              },
-            ]
           },
         ]
       },
-      
+      {
+        path: 'cabinetdoorsanddrawerfronts/:title',
+        component: CabinetDoorsAndDrawerFrontsComponent,
+        data: { breadcrumb: ':title' }
+      },
       {
         path: 'productdetails/:title',
         component: ProductDetailsComponent,

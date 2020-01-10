@@ -8,11 +8,59 @@ export class PageHeaderService {
     getMenu(): Array<any> {
         const menu = [
             {
-                path:'./cabinetdoorsanddrawerfronts',
+                path: './home',
+                title: 'Home'
+            },
+            {
+                path: './contactus',
+                title: 'Contact US'
+            },
+            {
+                path: './companyprofile',
+                title: 'Company Profile'
+            },
+            {
+                path: './howtoorder',
+                title: 'How To Order'
+            },
+            {
+                path: './galleryandvideos',
+                title: 'Gallery And Videos'
+            },
+            {
+                path: './finishes',
+                title: 'Finishes'
+            },
+            {
+                path: './faq',
+                title: 'Frequently Aasked Questions'
+            },
+            {
+                path: './warranty',
+                title: 'Warranty'
+            },
+            {
+                path: './cabinetdoors',
+                title: 'Cabinet Doors'
+            },
+            {
+                path: './moldings',
+                title: 'Modlings'
+            },
+            {
+                path: './drawerfronts',
+                title: 'Drawer Fronts'
+            },
+            {
+                path: './accessories',
+                title: 'Accessories'
+            },
+            {
+                path: './cabinetdoorsanddrawerfronts',
                 title: 'Cabinet Doors And Drawer Fronts',
                 children: [
                     {
-                        path:'./1-PIECE-MDF-DESIGNS',
+                        path: './1-PIECE-MDF-DESIGNS',
                         title: '1 PIECE MDF DESIGNS',
                         children: [
                             {
@@ -140,7 +188,7 @@ export class PageHeaderService {
                         ]
                     },
                     {
-                        path:'./5-PIECE-MDF-DESIGNS',
+                        path: './5-PIECE-MDF-DESIGNS',
                         title: '5 PIECE MDF DESIGNS',
                         children: [
                             {
@@ -162,7 +210,7 @@ export class PageHeaderService {
                         ]
                     },
                     {
-                        path:'./GLASS-DOORS',
+                        path: './GLASS-DOORS',
                         title: 'GLASS DOORS',
                         children: [
                             {
@@ -213,7 +261,7 @@ export class PageHeaderService {
                     },
                     {
                         title: 'HARDWOOD DOORS',
-                        path:'./HARDWOOD-DOORS',
+                        path: './HARDWOOD-DOORS',
                     }
                 ]
             }
